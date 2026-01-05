@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Happy New Year 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body {
+    margin: 0; padding: 0;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    color: white; font-family: Arial, sans-serif;
+    text-align: center; display: flex;
+    justify-content: center; align-items: center;
+    height: 100vh; overflow: hidden;
+  }
+  #container {
+    max-width: 90%; max-height: 90%;
+    font-variant: small-caps;
+    font-size: 26px;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .line {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInOut 7s ease forwards;
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
+  }
+  @keyframes fadeInOut {
+    0% {opacity: 0; transform: translateY(20px);}
+    20%, 80% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(-20px);}
+  }
+</style>
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+const lines = [
+  "From Saqib to mrs Saqib",
+  "Assalamualaikum, My Love 🤍",
+  "I Hope You Are Doing Well.",
+  "This New Year Is Not Just Another Year,",
+  "It Is A Promise I Want To Begin With You.",
+  "The Past Taught Us Patience And Understanding,",
+  "And Every Phase Made My Feelings Stronger.",
+  "Sometimes Situations Become Difficult,",
+  "But My Belief In Us Never Becomes Weak.",
+  "You Are Not Just A Part Of My Life,",
+  "You Are The Peace My Heart Looks For.",
+  "In 2026, I Pray That Allah Keeps Us Safe,",
+  "And Fills Our Days With Love And Happiness.",
+  "May Our Journey Be Full Of Understanding,",
+  "And Our Bond Grow Stronger Every Day.",
+  "Happy New Year 2026 ✨",
+  "Forever Yours, Always 🤍"
+];
+
+const container = document.getElementById('container');
+let i = 0;
+
+function showLine() {
+  if(i < lines.length) {
+    container.innerHTML = "<div class='line'>" + lines[i] + "</div>";
+    i++;
+    setTimeout(showLine, 7000);
+  }
+}
+showLine();
+</script>
+</body>
+</html>
